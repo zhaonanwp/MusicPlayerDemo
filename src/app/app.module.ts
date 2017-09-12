@@ -7,6 +7,9 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { MusicPlayer } from '../pages/musicplayer/musicplayer';
+
+import { MediaListService } from '../service/MediaListService';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +21,8 @@ import { IonicAudioModule, WebAudioProvider, CordovaMediaProvider, defaultAudioP
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MusicPlayer
   ],
   imports: [
     BrowserModule,
@@ -31,11 +35,14 @@ import { IonicAudioModule, WebAudioProvider, CordovaMediaProvider, defaultAudioP
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MusicPlayer
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    MediaListService,
+    MusicPlayer,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
    
   ]

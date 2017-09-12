@@ -1,21 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     <ion-list no-lines>
-        <audio-track #audio *ngFor="let item of items" [track]="item" (onFinish)="onTrackFinished($event)">
-            <button ion-item *ngFor="let item of items">
+        <button ion-item *ngFor="let item of items" (click)="playNow(item)">
                 <ion-thumbnail item-start>
                     <img src="{{item.art}}">
                   </ion-thumbnail>
-                  <h2>{{item.title}}</h2>                
+                  <h2>{{item.title}}</h2>
+                  <h4>{{item.artist}}</h4>                
             </button>
-        </audio-track>
-     
     </ion-list>
-    <button ion-button (click)="autoPlay()">play</button>
-    <button ion-button (click)="pause()">pause</button>
 </ion-content>
