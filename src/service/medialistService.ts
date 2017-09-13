@@ -9,7 +9,7 @@ export class MediaListService{
           art: 'http://ionicframework.com/dist/preview-app/www/assets/img/thumbnail-totoro.png',
           title: '11111',
           src: 'http://cdn5.lizhi.fm/audio/2016/02/01/2514879377169964038_hd.mp3'
-        }
+        } 
       ];
 
     public add(item:ITrackConstraint){
